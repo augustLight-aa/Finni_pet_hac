@@ -75,28 +75,6 @@
 
 ---
 
-## Структура репозитория
-finni-pet-hac/
-├── app/
-│ ├── src/main/
-│ │ ├── java/com/topitop/finni_pet_hac/
-│ │ │ ├── MainActivity.kt
-│ │ │ ├── CreatePetActivity.kt
-│ │ │ ├── BudgetActivity.kt
-│ │ │ ├── ShopActivity.kt
-│ │ │ ├── GoalsActivity.kt
-│ │ │ ├── TasksActivity.kt
-│ │ │ └── AdultActivity.kt
-│ │ ├── res/
-│ │ │ ├── layout/
-│ │ │ ├── drawable/
-│ │ │ └── values/
-│ │ ── AndroidManifest.xml
-│ └── build.gradle
-├── DOCUMENTATION.md
-└── README.md
-
----
 
 ## Реализованные требования
 
