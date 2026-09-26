@@ -24,7 +24,7 @@ ________________________________________
 •	Kotlin: 1.9.22
 •	Material Components: 1.11.0
 Установка и сборка
-1.	Клонируйте репозиторий: git clone https://github.com/ВАШ_USERNAME/finni-pet-hac.git cd finni-pet-hac
+1.	Клонируйте репозиторий: git clone https://github.com/augustLight-aa/Finni_pet_hac.git
 2.	Откройте проект в Android Studio:
 o	File → Open → выберите папку проекта
 o	Дождитесь завершения синхронизации Gradle
