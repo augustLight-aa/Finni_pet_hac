@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF4DF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Шапка -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📊 План бюджета"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_block_blue"
+                android:text="💰 1000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2980B9"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Распредели монеты на этот период:"
+            android:textSize="16sp"
+            android:textColor="#7F8C8D"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Обязательные расходы -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🥦 Обязательные расходы"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#66BB6A"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Еда, уход, здоровье питомца"
+                android:textSize="14sp"
+                android:textColor="#7F8C8D"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/et_mandatory"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="0"
+                android:inputType="number"
+                android:background="@drawable/bg_card"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="18sp"
+                android:textColor="#2C3E50" />
+        </LinearLayout>
+
+        <!-- Необязательные расходы -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Необязательные расходы"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Игрушки, лакомства, развлечения"
+                android:textSize="14sp"
+                android:textColor="#7F8C8D"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/et_optional"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="0"
+                android:inputType="number"
+                android:background="@drawable/bg_card"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="18sp"
+                android:textColor="#2C3E50" />
+        </LinearLayout>
+
+        <!-- Накопления -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏦 Накопления"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2980B9"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Откладываем на большую цель"
+                android:textSize="14sp"
+                android:textColor="#7F8C8D"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/et_savings"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="0"
+                android:inputType="number"
+                android:background="@drawable/bg_card"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="18sp"
+                android:textColor="#2C3E50" />
+        </LinearLayout>
+
+        <!-- Остаток -->
+        <TextView
+            android:id="@+id/tv_remaining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Остаток: 1000 монет"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2980B9"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Кнопка подтверждения -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm_budget"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Подтвердить план"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_pill"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

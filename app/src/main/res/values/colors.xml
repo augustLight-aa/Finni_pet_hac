@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основной фон приложения (теплый кремовый) -->
+    <color name="bg_main">#FBF4DF</color>
+
+    <!-- Фон карточек (светлый) -->
+    <color name="card_bg">#FFFFFF</color>
+
+    <!-- Блок "Могу потратить" -->
+    <color name="light_blue_bg">#D6EAF8</color>
+    <color name="primary_blue">#2980B9</color>
+
+    <!-- Блок "Накопления" -->
+    <color name="light_purple_bg">#E8DAEF</color>
+    <color name="primary_purple">#8E44AD</color>
+
+    <!-- Светло-фиолетовый для кнопок -->
+    <color name="light_button_purple">#E8DAEF</color>
+    <color name="text_button_purple">#6C3483</color>
+
+    <!-- Основной цвет кнопок (желтый) -->
+    <color name="primary_yellow">#F9CC61</color>
+
+    <!-- Прогресс-бары и успех -->
+    <color name="accent_green">#66BB6A</color>
+
+    <!-- Текст -->
+    <color name="text_main">#2C3E50</color>
+    <color name="text_secondary">#7F8C8D</color>
+
+    <!-- Рамки -->
+    <color name="border_light">#E0E6ED</color>
+</resources>

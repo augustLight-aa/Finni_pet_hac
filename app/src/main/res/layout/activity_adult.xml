@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF4DF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Шапка -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔒 Раздел для взрослого"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Здесь вы можете отслеживать прогресс ребенка и управлять настройками"
+            android:textSize="14sp"
+            android:textColor="#7F8C8D"
+            android:layout_marginBottom="24dp" />
+
+        <!-- БАРЬЕР: Математический пример -->
+        <LinearLayout
+            android:id="@+id/layout_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="24dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Подтвердите, что вы взрослый"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tv_math_problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7 + 8 = ?"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2980B9"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/et_math_answer"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Введите ответ"
+                android:inputType="number"
+                android:background="@drawable/bg_card"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="18sp"
+                android:textColor="#2C3E50"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_check_answer"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Проверить"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button_pill"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- КОНТЕНТ ДЛЯ ВЗРОСЛОГО (скрыт до разблокировки) -->
+        <LinearLayout
+            android:id="@+id/layout_adult_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Статистика: сетка карточек -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 Прогресс ребенка"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Карточка: Период -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_block_blue"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginEnd="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Период"
+                        android:textSize="12sp"
+                        android:textColor="#2980B9" />
+
+                    <TextView
+                        android:id="@+id/tv_stat_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 из 5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2980B9"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <!-- Карточка: Баланс -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginStart="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Баланс"
+                        android:textSize="12sp"
+                        android:textColor="#7F8C8D" />
+
+                    <TextView
+                        android:id="@+id/tv_stat_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <!-- Карточка: Настроение -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginEnd="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Настроение"
+                        android:textSize="12sp"
+                        android:textColor="#7F8C8D" />
+
+                    <TextView
+                        android:id="@+id/tv_stat_mood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="70/100"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#66BB6A"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <!-- Карточка: Цель -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_block_purple"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginStart="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Цель"
+                        android:textSize="12sp"
+                        android:textColor="#8E44AD" />
+
+                    <TextView
+                        android:id="@+id/tv_stat_goal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Не выбрана"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#8E44AD"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Кнопка сброса -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_reset_profile"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🔄 Сбросить тестовый профиль"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_card"
+                android:textColor="#E74C3C" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

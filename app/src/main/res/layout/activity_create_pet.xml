@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF4DF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Создай своего питомца"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Превью питомца -->
+        <ImageView
+            android:id="@+id/iv_pet_preview"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:scaleType="centerInside" />
+
+        <!-- Поле ввода имени -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Как назовем питомца?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_pet_name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Введите имя"
+            android:background="@drawable/bg_card"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="18sp"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Выбор вида -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбери вид"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_owl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="🦉 Сова"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_card"
+                android:textColor="#7F8C8D"
+                android:layout_marginEnd="6dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_bear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="🐻 Медведь"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_card"
+                android:textColor="#7F8C8D"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_fox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="🦊 Лиса"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_card"
+                android:textColor="#7F8C8D"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- Выбор цвета -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбери цвет"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="40dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_mint"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="Мятный"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_card"
+                android:textColor="#7F8C8D"
+                android:layout_marginEnd="6dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_blue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="Голубой"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_card"
+                android:textColor="#7F8C8D"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_orange"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="Оранжевый"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_card"
+                android:textColor="#7F8C8D"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- Кнопка сохранения -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save_pet"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Сохранить питомца"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_pill"
+            android:textColor="#FFFFFF"
+            android:enabled="false"
+            android:alpha="0.5" />
+
+    </LinearLayout>
+</ScrollView>

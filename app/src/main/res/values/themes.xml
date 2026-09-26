@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Finni_pet_hac" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_yellow</item>
+        <item name="colorPrimaryVariant">@color/primary_yellow</item>
+        <item name="colorOnPrimary">@color/text_main</item>
+        <item name="colorSecondary">@color/light_button_purple</item>
+        <item name="colorSecondaryVariant">@color/light_button_purple</item>
+        <item name="colorOnSecondary">@color/text_main</item>
+        <item name="android:statusBarColor">@color/bg_main</item>
+
+        <!-- для диалогов -->
+        <item name="android:colorBackground">#FBF4DF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#2C3E50</item>
+    </style>
+</resources>
