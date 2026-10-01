@@ -12,11 +12,11 @@
 
     <!-- Блок "Накопления" -->
     <color name="light_purple_bg">#E8DAEF</color>
-    <color name="primary_purple">#8E44AD</color>
+    <color name="primary_purple">#C9A7E8</color>
 
     <!-- Светло-фиолетовый для кнопок -->
     <color name="light_button_purple">#E8DAEF</color>
-    <color name="text_button_purple">#6C3483</color>
+    <color name="text_button_purple">#C9A7E8</color>
 
     <!-- Основной цвет кнопок (желтый) -->
     <color name="primary_yellow">#F9CC61</color>

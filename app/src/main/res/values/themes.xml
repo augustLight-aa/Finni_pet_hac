@@ -7,7 +7,6 @@
         <item name="colorSecondaryVariant">@color/light_button_purple</item>
         <item name="colorOnSecondary">@color/text_main</item>
         <item name="android:statusBarColor">@color/bg_main</item>
-
         <!-- для диалогов -->
         <item name="android:colorBackground">#FBF4DF</item>
         <item name="colorSurface">#FFFFFF</item>

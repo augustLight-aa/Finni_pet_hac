@@ -1,7 +1,6 @@
 package com.topitop.finni_pet_hac
 
 import android.app.AlertDialog
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
@@ -31,7 +30,7 @@ class ShopActivity : AppCompatActivity() {
         ShopItem("💧 Свежая вода", 50, "mandatory", "Здоровье +15", "Вода — это жизнь!"),
         ShopItem("🛁 Шампунь и уход", 80, "mandatory", "Настроение +20, Здоровье +10", "Чистота — залог здоровья!"),
         ShopItem("🩺 Визит к ветеринару", 150, "mandatory", "Здоровье +40", "Лучше предотвратить, чем лечить!"),
-        ShopItem("🛏️ Замена подстилки", 120, "mandatory", "Энергия +25, Настроение +15", "Чистое место для сна важно."),
+        ShopItem("️ Замена подстилки", 120, "mandatory", "Энергия +25, Настроение +15", "Чистое место для сна важно."),
         ShopItem("🎾 Игрушка-пищалка", 200, "optional", "Настроение +40", "Игрушка — это весело!"),
         ShopItem("🎀 Бантик или ошейник", 150, "optional", "Настроение +30", "Аксессуары украшают Финни!"),
         ShopItem("🍪 Лакомство", 90, "optional", "Настроение +20", "Вкусняшка для радости!"),
@@ -53,8 +52,8 @@ class ShopActivity : AppCompatActivity() {
     private fun loadData() {
         val prefs = getSharedPreferences("pet_profile", MODE_PRIVATE)
         balance = prefs.getInt("balance", 1000)
-        planMandatory = prefs.getInt("plan_mandatory", 3)
-        planOptional = prefs.getInt("plan_optional", 3)
+        planMandatory = prefs.getInt("plan_mandatory", 0) // Исправлено: было 3, но сохраняется сумма
+        planOptional = prefs.getInt("plan_optional", 0)
         spentMandatory = prefs.getInt("spent_mandatory", 0)
         spentOptional = prefs.getInt("spent_optional", 0)
     }
@@ -113,23 +112,24 @@ class ShopActivity : AppCompatActivity() {
         updateFilterButtons(btnFilterAll, btnFilterMandatory, btnFilterOptional)
     }
 
+    // ИСПРАВЛЕНИЕ: Неактивные кнопки теперь белые с серым текстом
     private fun updateFilterButtons(active: Button, vararg inactive: Button) {
-        // Твой фиксированный цвет (исправлен HEX на 8 символов)
         val fixedColor = android.content.res.ColorStateList.valueOf(0xFFC9A7E8.toInt())
         val whiteColor = android.content.res.ColorStateList.valueOf(0xFFFFFFFF.toInt())
 
         // Активная кнопка
-        active.backgroundTintList = fixedColor // ← ИСПОЛЬЗУЕМ TINT, А НЕ BACKGROUND
+        active.backgroundTintList = fixedColor
         active.setTextColor(0xFFFFFFFF.toInt())
         active.isAllCaps = false
 
-        // Неактивные кнопки (если хочешь, чтобы они были белыми, раскомментируй whiteColor)
+        // Неактивные кнопки
         inactive.forEach {
-            it.backgroundTintList = fixedColor // Или whiteColor, если неактивные должны быть белыми
-            it.setTextColor(0xFFFFFFFF.toInt())
+            it.backgroundTintList = whiteColor
+            it.setTextColor(0xFF7F8C8D.toInt()) // Серый текст
             it.isAllCaps = false
         }
     }
+
     private fun renderShopItems() {
         val container = findViewById<LinearLayout>(R.id.shop_items_container)
         container.removeAllViews()
@@ -198,10 +198,11 @@ class ShopActivity : AppCompatActivity() {
         buyButton.isAllCaps = false
 
         buyButton.backgroundTintList = android.content.res.ColorStateList.valueOf(0xFFC9A7E8.toInt())
-        buyButton.setTextColor(0xFFFFFFFFa.toInt())
+
+        // ИСПРАВЛЕНИЕ: убрана лишняя буква 'a' в HEX коде цвета
+        buyButton.setTextColor(0xFFFFFFFF.toInt())
 
         buyButton.setPadding(32, 16, 32, 16)
-        // Убираем строку: buyButton.background = getDrawable(R.drawable.bg_button_pill)
 
         buyButton.setOnClickListener {
             showPurchaseDialog(item)

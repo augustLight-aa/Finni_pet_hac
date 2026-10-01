@@ -132,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:text="Накопления"
                         android:textSize="12sp"
-                        android:textColor="#8E44AD"
+                        android:textColor="#C9A7E8"
                         android:layout_marginBottom="4dp" />
 
                     <TextView
@@ -142,7 +142,7 @@
                         android:text="2740 монет"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#8E44AD" />
+                        android:textColor="#C9A7E8" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -168,7 +168,7 @@
                     android:id="@+id/tv_task_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="📌 Первый доход (+40 монет)"
+                    android:text=" Первый доход (+40 монет)"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="#2C3E50"
@@ -269,12 +269,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginBottom="12dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:layout_marginBottom="4dp">
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -282,6 +284,7 @@
                             android:text="😊 Настроение:"
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
+
                         <TextView
                             android:id="@+id/tv_pet_mood_text"
                             android:layout_width="wrap_content"
@@ -290,6 +293,7 @@
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
                     </LinearLayout>
+
                     <ProgressBar
                         android:id="@+id/pb_pet_mood"
                         style="?android:attr/progressBarStyleHorizontal"
@@ -306,12 +310,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginBottom="12dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:layout_marginBottom="4dp">
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -319,6 +325,7 @@
                             android:text="❤️ Здоровье:"
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
+
                         <TextView
                             android:id="@+id/tv_pet_health_text"
                             android:layout_width="wrap_content"
@@ -327,6 +334,7 @@
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
                     </LinearLayout>
+
                     <ProgressBar
                         android:id="@+id/pb_pet_health"
                         style="?android:attr/progressBarStyleHorizontal"
@@ -343,12 +351,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginBottom="12dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:layout_marginBottom="4dp">
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -356,6 +366,7 @@
                             android:text="🍖 Сытость:"
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
+
                         <TextView
                             android:id="@+id/tv_pet_hunger_text"
                             android:layout_width="wrap_content"
@@ -364,6 +375,7 @@
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
                     </LinearLayout>
+
                     <ProgressBar
                         android:id="@+id/pb_pet_hunger"
                         style="?android:attr/progressBarStyleHorizontal"
@@ -379,12 +391,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
                         android:layout_marginBottom="4dp">
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -392,6 +406,7 @@
                             android:text="⚡ Энергия:"
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
+
                         <TextView
                             android:id="@+id/tv_pet_energy_text"
                             android:layout_width="wrap_content"
@@ -400,6 +415,7 @@
                             android:textSize="14sp"
                             android:textColor="#2C3E50" />
                     </LinearLayout>
+
                     <ProgressBar
                         android:id="@+id/pb_pet_energy"
                         style="?android:attr/progressBarStyleHorizontal"
@@ -418,12 +434,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"
-                android:text="⏭ Завершить период (Демо)"
+                android:text=" Завершить период (Демо)"
                 android:textSize="14sp"
                 android:textAllCaps="false"
                 android:background="@drawable/bg_button_gray"
                 android:textColor="#757575" />
-
         </LinearLayout>
     </ScrollView>
 
@@ -497,7 +512,5 @@
             android:backgroundTint="#FFEBBD"
             android:scaleType="centerInside"
             android:padding="12dp" />
-
     </LinearLayout>
-
 </LinearLayout>

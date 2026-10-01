@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🔒 Раздел для взрослого"
+            android:text=" Раздел для взрослого"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="#2C3E50"
@@ -94,7 +94,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="📊 Прогресс ребенка"
+                android:text=" Прогресс ребенка"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#2C3E50"
@@ -212,7 +212,7 @@
                         android:layout_height="wrap_content"
                         android:text="Цель"
                         android:textSize="12sp"
-                        android:textColor="#8E44AD" />
+                        android:textColor="#C9A7E8" />
 
                     <TextView
                         android:id="@+id/tv_stat_goal"
@@ -221,7 +221,7 @@
                         android:text="Не выбрана"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textColor="#8E44AD"
+                        android:textColor="#C9A7E8"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
             </LinearLayout>
@@ -237,6 +237,5 @@
                 android:background="@drawable/bg_card"
                 android:textColor="#E74C3C" />
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>
