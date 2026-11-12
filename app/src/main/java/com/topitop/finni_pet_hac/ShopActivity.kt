@@ -233,26 +233,67 @@ class ShopActivity : AppCompatActivity() {
     private fun completePurchase(item: ShopItem) {
         balance -= item.price
 
+        // Обновляем факт расходов для плана бюджета
         if (item.category == "mandatory") {
             spentMandatory += item.price
         } else {
             spentOptional += item.price
         }
 
+        // ✅ ДОБАВЛЕНО: Применяем эффект к состоянию питомца
+        applyItemEffect(item.effect)
+
         saveData()
 
+        // Обратная связь с объяснением причинно-следственной связи (требование 2.5.9 ТЗ)
         val message = if (item.category == "mandatory") {
-            "✅ Правильно! Ты купил ${item.name} — это обязательный расход.\n\n${item.explanation}"
+            "✅ Правильно! Ты купил ${item.name}.\n\n${item.explanation}"
         } else {
-            "⭐ Покупка совершена! ${item.name} — это необязательный расход.\n\n${item.explanation}"
+            "⭐ Покупка совершена! ${item.name}.\n\n${item.explanation}"
         }
 
         AlertDialog.Builder(this)
             .setTitle("Покупка завершена!")
             .setMessage(message)
             .setPositiveButton("Отлично") { _, _ ->
-                finish()
+                finish() // Возвращаемся на главный экран, где видны обновленные показатели
             }
             .show()
+    }
+
+    // ✅ НОВЫЙ МЕТОД: Парсинг строки эффекта и применение к показателям
+    private fun applyItemEffect(effectString: String) {
+        // Пример формата эффекта: "Сытость +30" или "Настроение +40, Энергия -10"
+        val prefs = getSharedPreferences("pet_profile", MODE_PRIVATE)
+
+        var mood = prefs.getInt("pet_mood", 70)
+        var hunger = prefs.getInt("pet_hunger", 60)
+        var energy = prefs.getInt("pet_energy", 65)
+        var health = prefs.getInt("pet_health", 80)
+
+        effectString.split(",").forEach { part ->
+            val trimmed = part.trim()
+            when {
+                trimmed.contains("Сытость") -> hunger = updateStat(hunger, trimmed)
+                trimmed.contains("Настроение") -> mood = updateStat(mood, trimmed)
+                trimmed.contains("Энергия") -> energy = updateStat(energy, trimmed)
+                trimmed.contains("Здоровье") -> health = updateStat(health, trimmed)
+            }
+        }
+
+        // Сохраняем обновленные значения
+        prefs.edit().apply {
+            putInt("pet_mood", mood.coerceIn(0, 100))
+            putInt("pet_hunger", hunger.coerceIn(0, 100))
+            putInt("pet_energy", energy.coerceIn(0, 100))
+            putInt("pet_health", health.coerceIn(0, 100))
+            apply()
+        }
+    }
+
+    // Вспомогательный метод для изчисления числа из строки типа "+30" или "-10"
+    private fun updateStat(currentValue: Int, effectPart: String): Int {
+        val number = Regex("[+-]?\\d+").find(effectPart)?.value?.toIntOrNull() ?: return currentValue
+        return currentValue + number
     }
 }

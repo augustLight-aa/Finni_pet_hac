@@ -104,7 +104,7 @@ class CreatePetActivity : AppCompatActivity() {
             prefs.edit().apply {
                 putString("pet_name", petName)
                 putString("pet_image", petImage)
-                putInt("balance", 2156)
+                putInt("balance", 300)
                 putInt("savings", 2740)
                 putInt("pet_mood", 70)
                 putInt("pet_health", 80)

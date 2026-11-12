@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         val isFirstLaunch = prefs.getBoolean("is_first_launch", true)
 
         if (isFirstLaunch) {
-            startActivity(Intent(this, CreatePetActivity::class.java))
+            // Сначала показываем Welcome, потом CreatePet
+            startActivity(Intent(this, WelcomeActivity::class.java))
             finish()
             return
         }
